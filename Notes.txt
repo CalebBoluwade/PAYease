@@ -1,0 +1,49 @@
+1. Format the Amount as currency or Number
+2. * UNIQUE ACCOUNT NUMBER FIELD
+3. No Spaces between the headers
+
+ // paymentSchedule = [...paymentSchedule, newPay];
+    // if (transactionType === "BULK_FT") {
+    //   await sample.forEach(
+    //     (item) => {
+    //
+    //     },
+    //     async () => {
+    //       if (totalAmount + TRANS_FEE > acctBalance) {
+
+    //           dB.query(
+    //             `UPDATE payrolldb.transactionDetails SET responseMessage = 'Insufficient funds' AND responseCode = '${dB.query(
+    //               `SELECT TOP 1 FROM payrolldb.codes WHERE responseMessage = 'Insufficient funds' AND responseCode = 'Insufficient funds'`
+    //             )}' WHERE companyID = '${companyID}' AND sessionID = '${sessionID}'`
+    //           );
+    //           res.send({ message: "Insufficient funds", responseCode: 52 });
+    //           res.end();
+    //         } catch (err) {
+    //           logger.info(err);
+    //         }
+    //       } else {
+    //         // INITIALIZE DEBIT
+    //         const url: string = `https://api.paypal.com/payment`;
+    //         const headers: object = {
+    //           "content-type": "application/json; charset=utf-8",
+    //           connection: "keep-alive",
+    //         };
+
+    //         // soap.createClient(url, headers, () => {
+    //         //   return;
+    //         // });
+    //         if (totalAmount < acctBalance) {
+    //           try {
+    //             dB.query(
+    //               `UPDATE payrolldb.transactionDetails SET status = 'Successful', responseMessage = 'Successful' AND responseCode = '00' WHERE companyID = '${companyID}' AND sessionID = '${sessionID}'`
+    //             );
+    //             res.send({ message: "Insufficient funds", responseCode: 52 });
+    //             res.end();
+    //           } catch (err) {
+    //             logger.info(err);
+    //           }
+    //         }
+    //       }
+    //     }
+    //   );
+    // }

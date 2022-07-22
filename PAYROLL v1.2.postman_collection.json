@@ -1,0 +1,32 @@
+{
+	"info": {
+		"_postman_id": "ed65827e-5c8c-4b0f-8b6a-4f9de83cb285",
+		"name": "PAYROLL v1.2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21914398"
+	},
+	"item": [
+		{
+			"name": "Customer Balance",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:6966/api/v1/customers/balance",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "6966",
+					"path": [
+						"api",
+						"v1",
+						"customers",
+						"balance"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
