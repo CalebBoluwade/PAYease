@@ -22,8 +22,12 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
 Object.defineProperty(exports, "__esModule", { value: true });
-const sql = require("mssql");
+const express_1 = __importDefault(require("express"));
+const app = (0, express_1.default)();
 const dotenv = __importStar(require("dotenv"));
 dotenv.config();
 const pino = require("pino");
@@ -32,32 +36,5 @@ const stream = pretty({
     colorize: true,
 });
 const logger = pino(stream);
-const sqlConfig = {
-    user: process.env.LOCAL_DB_USER,
-    password: process.env.LOCAL_DB_PWD,
-    database: process.env.LOCAL_DB_NAME,
-    port: process.env.LOCAL_DB_PORT,
-    server: "localhost",
-    pool: {
-        max: 10,
-        min: 0,
-        idleTimeoutMillis: 30000,
-    },
-    options: {
-        encrypt: false,
-        trustServerCertificate: true, // change to true for local dev / self-signed certs
-    },
-};
-const dB = async () => {
-    try {
-        // make sure that any items are correctly URL encoded in the connection string
-        await sql.connect(sqlConfig);
-        // const result = await sql.query`select * from mytable where id = ${value}`;
-        // console.dir(result);
-    }
-    catch (err) {
-        // ... error checks
-        logger.error(err);
-    }
-};
-exports.default = dB;
+exports.default = app.delete("/api/v1/payroll/close", async (req, res) => {
+});
