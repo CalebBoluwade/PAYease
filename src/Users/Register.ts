@@ -17,8 +17,8 @@ export default app.post("/api/v1/onboarding", (req: Request, res: Response) => {
       NUBAN_AccountNo,
     } = req.body;
 
-    Bank = "Keystone";
-    NUBAN_AccountNo = "1012391029";
+    Bank = "XYZ";
+    NUBAN_AccountNo = "1111111111";
     const date = new Date();
 
     // console.log(req.body, Bank, NUBAN_AccountNo);
